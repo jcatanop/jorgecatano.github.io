@@ -1,0 +1,75 @@
+@import "scss/functions"; 
+@import "scss/variables";
+
+/**
+* Theme colors
+*/
+$title: #464646; 
+$subtitle: #32473d;
+
+$theme-colors: map-merge($theme-colors, (
+  "title": $title,
+  "subtitle": $subtitle
+));
+
+// set changes
+@import "scss/bootstrap";
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  background-color: #fffffe;
+}
+
+/* Layout elements*/
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  width: 100%;
+  max-width: 1200px;
+}
+
+@media (max-width: 768px) {
+  /*Mobile*/
+}
+
+/* Headers and link elements*/
+.content h1 {
+  font-size: 2rem;
+  color: $title;
+  text-align: center; 
+  margin-top: 60px; 
+  margin-bottom: 40px;
+}
+
+.content h2 {
+  font-size: 1.5rem;
+  padding-top: 20px;
+  color: $subtitle;
+}
+
+.content h3 {
+  font-size: 1.25rem;
+  color: $subtitle;
+}
+
+.content p {
+  font-size: 0.9rem;
+  text-align: justify;
+}  
+
+.content blockquote {
+  font-size: 0.9rem;
+  padding: 10px;
+  border-left: 4px solid #ccc;
+  font-style: italic;
+  font-weight: lighter;
+} 
+
+.content a {
+  color: $subtitle;
+}
